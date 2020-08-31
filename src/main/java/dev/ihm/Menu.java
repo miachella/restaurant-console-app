@@ -11,6 +11,9 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Scanner;
 
+import org.springframework.stereotype.Controller;
+
+@Controller
 public class Menu {
 
     private Map<Integer, IOptionMenu> actions = new HashMap<>();
