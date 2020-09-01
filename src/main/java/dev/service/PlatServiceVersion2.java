@@ -6,6 +6,11 @@ import dev.exception.PlatException;
 
 import java.util.List;
 
+import org.springframework.context.annotation.Profile;
+import org.springframework.stereotype.Service;
+
+@Service
+@Profile({"Mem2", "Fich2"})
 public class PlatServiceVersion2 implements IPlatService {
 
     private IPlatDao dao;

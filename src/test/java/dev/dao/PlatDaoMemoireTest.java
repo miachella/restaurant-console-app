@@ -7,7 +7,6 @@ import java.util.List;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-
 import dev.entite.Plat;
 
 public class PlatDaoMemoireTest {
@@ -32,5 +31,6 @@ public class PlatDaoMemoireTest {
 		Plat p = new Plat("Curry", 1000);
 		l.add(p);
 		assertEquals(l, platDaoMemoire.listerPlats());
-		}
+	}
+	
 }
