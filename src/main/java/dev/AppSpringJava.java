@@ -3,8 +3,6 @@ package dev;
 import java.util.Scanner;
 
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
-import org.springframework.dao.DataAccessException;
-
 import dev.config.AppConfig;
 import dev.ihm.MenuBean;
 
@@ -25,9 +23,7 @@ public class AppSpringJava {
 			context.getBean(Scanner.class).close();
 			// fermeture du contexte Spring
 			context.close();
-		} catch (DataAccessException e) {
-			System.out.println("Problème d'accès à la base de données.");
-		}
+		} 
 	}
 
 }

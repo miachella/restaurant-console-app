@@ -13,6 +13,7 @@ public class PlatRowMapper implements RowMapper<Plat> {
 	public Plat mapRow(ResultSet rs, int rowNum) throws SQLException {
 		Plat plat = new Plat();
 		plat.setNom(rs.getString("nom"));
+		plat.setPrixEnCentimesEuros(rs.getInt("prixEnCentimesEuros"));
 		return plat;
 	}
 	

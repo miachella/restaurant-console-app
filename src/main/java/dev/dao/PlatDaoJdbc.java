@@ -22,14 +22,14 @@ public class PlatDaoJdbc implements IPlatDao {
 
 	@Override
 	public List<Plat> listerPlats() {
-		String sql = "SELECT * FROM restaurant-bdd";
+		String sql = "SELECT * FROM plat";
 		return this.jdbcTemplate.query(sql, new PlatRowMapper());
 	}
 
 	@Override
 	public void ajouterPlat(String nomPlat, Integer prixPlat) {
-		String sql = "INSERT INTO plat(nom) values(?)";
-		this.jdbcTemplate.update(sql, nomPlat);
+		String sql = "INSERT INTO plat(nom, prixEnCentimesEuros) values(?, ?)";
+		this.jdbcTemplate.update(sql, nomPlat, prixPlat);
 
 	}
 
