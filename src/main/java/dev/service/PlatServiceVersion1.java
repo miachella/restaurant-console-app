@@ -12,7 +12,7 @@ import org.springframework.stereotype.Service;
 
 @Primary
 @Service
-@Profile({"Mem1", "Fich1", "jdbc"})
+@Profile({"Mem1", "Fich1", "jdbc", "jpa"})
 public class PlatServiceVersion1 implements IPlatService {
 
     private IPlatDao dao;

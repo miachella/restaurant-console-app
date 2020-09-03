@@ -12,7 +12,7 @@ public class AppSpringJava {
 		
 		// Création du contexte Spring à partir d'une configuration Java
 		try(AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext()){
-			context.getEnvironment().setActiveProfiles("jdbc");
+			context.getEnvironment().setActiveProfiles("jpa");
 			context.register(AppConfig.class);
 			context.refresh();
 		
