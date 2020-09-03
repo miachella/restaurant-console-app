@@ -13,9 +13,10 @@ import dev.entite.Plat;
 
 @Repository
 @Profile("jpa")
-public class PlatDaoJpa implements IPlatDao{
-	
-	@PersistenceContext private EntityManager em;
+public class PlatDaoJpa implements IPlatDao {
+
+	@PersistenceContext
+	private EntityManager em;
 
 	@Override
 	public List<Plat> listerPlats() {
@@ -29,7 +30,7 @@ public class PlatDaoJpa implements IPlatDao{
 		Plat p = new Plat();
 		p.setNom(nomPlat);
 		p.setPrixEnCentimesEuros(prixPlat);
-		
+
 		em.persist(p);
 	}
 
